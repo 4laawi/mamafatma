@@ -253,7 +253,7 @@ export default function Navbar() {
                 href={cat.value === 'all' ? '/' : `/shop/${cat.value}`}
                 className={clsx(
                   'inline-flex items-center justify-center px-3 py-1.5 rounded-full font-bold leading-none transition whitespace-nowrap',
-                  lang === 'ar' ? 'text-base md:text-lg' : 'text-xs md:text-sm',
+                  lang === 'ar' ? 'text-xs sm:text-sm md:text-base lg:text-lg' : 'text-xs md:text-sm',
                   activeCat === cat.value
                     ? 'bg-green-500 text-white shadow'
                     : 'bg-transparent text-gray-600 hover:bg-gray-100',

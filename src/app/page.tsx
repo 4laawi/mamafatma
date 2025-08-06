@@ -100,6 +100,7 @@ export default function Home() {
         const { data, error } = await supabase
           .from('products')
           .select('*')
+          .eq('featured', true)
           .limit(8);
         if (error) {
           console.error('Supabase error:', error.message);
