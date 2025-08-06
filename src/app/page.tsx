@@ -205,7 +205,7 @@ export default function Home() {
               isRTL ? "left-2" : "right-2"
             )}>
               <Image
-                src="/favicon.png"
+                src="/favicone.png"
                 alt="MF Logo"
                 width={40}
                 height={40}
