@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Remove dark mode background override */
+/*
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+*/
+
+html, body {
+  background: #fff !important;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.animate-badge-pop {
+  animation: badge-pop 0.3s cubic-bezier(.34,1.56,.64,1) both;
+}
+@keyframes badge-pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.4); }
+  100% { transform: scale(1); }
+}
+
+/* Hide server navbar when client navbar loads */
+.client-navbar-hidden {
+  transition: opacity 0.3s ease-out;
+}
+
+/* When client-side JavaScript is loaded, hide the server navbar */
+.js-loaded .client-navbar-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+@layer utilities {
+  @keyframes scroll-x {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .animate-scroll-x {
+    animation: scroll-x 40s linear infinite;
+  }
+}

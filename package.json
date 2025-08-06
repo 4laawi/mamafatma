@@ -1,0 +1,37 @@
+{
+  "name": "mamafatma-store",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "analyze-images": "node optimize-images.js"
+  },
+  "dependencies": {
+    "@headlessui/react": "^2.2.5",
+    "@heroicons/react": "^2.2.0",
+    "@stagewise-plugins/react": "^0.6.2",
+    "@stagewise/toolbar-next": "^0.6.2",
+    "@supabase/supabase-js": "^2.43.4",
+    "dayjs": "^1.11.13",
+    "next": "15.4.3",
+    "next-i18next": "^15.4.2",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "tailwindcss-rtl": "^0.9.0"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "15.4.3",
+    "prettier": "^3.6.2",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}
