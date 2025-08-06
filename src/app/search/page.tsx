@@ -6,8 +6,9 @@ import { clsx } from "clsx";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { ProductCardSkeleton } from "@/components/ui/Skeleton";
+import { Suspense } from "react";
 
-export default function SearchPage() {
+function SearchPageContent() {
   const { lang } = useLanguage();
   const searchParams = useSearchParams();
   const query = searchParams.get('q') || '';
@@ -23,23 +24,16 @@ export default function SearchPage() {
         setLoading(false);
         return;
       }
-
       setLoading(true);
-      
-      // Search in both French and Arabic product names
       let searchQuery = supabase
         .from('products')
         .select('*, categories(name_fr, name_ar), brands(name)')
         .or(`name_fr.ilike.%${query}%,name_ar.ilike.%${query}%`);
-
       if (selectedBrand) {
         searchQuery = searchQuery.eq('brand_id', selectedBrand);
       }
-
       const { data: prods } = await searchQuery;
       setProducts(prods || []);
-
-      // Get unique brands from search results
       if (prods && prods.length > 0) {
         const uniqueBrandIds = [...new Set(prods.map(p => p.brand_id).filter(Boolean))];
         const { data: brs } = await supabase
@@ -50,10 +44,8 @@ export default function SearchPage() {
       } else {
         setBrands([]);
       }
-      
       setLoading(false);
     }
-
     fetchData();
   }, [query, selectedBrand]);
 
@@ -254,5 +246,13 @@ export default function SearchPage() {
         </div>
       )}
     </main>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SearchPageContent />
+    </Suspense>
   );
 } 
