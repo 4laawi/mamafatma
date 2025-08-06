@@ -92,11 +92,6 @@ export const metadata: Metadata = {
     shortcut: '/favicon.png',
     apple: '/favicon.png',
   },
-  other: {
-    // Additional meta tags for Arabic version
-    'og:locale:alternate': 'ar_MA',
-    'og:locale:alternate': 'fr_FR',
-  },
 };
 
 export const viewport: Viewport = {
