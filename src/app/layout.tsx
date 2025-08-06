@@ -110,6 +110,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <head>
         {/* Favicon is now handled by metadata.icons */}
+        <meta property="og:locale:alternate" content="ar_MA" />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} antialiased bg-white pt-44 md:pt-48`}>
         <PerformanceMonitor />
