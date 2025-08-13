@@ -106,6 +106,48 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <head>
         {/* Favicon is now handled by metadata.icons */}
         <meta property="og:locale:alternate" content="ar_MA" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: "Mamafatma",
+              alternateName: "ماما فاطمة",
+              url: "https://mamafatma.ma",
+              logo: "https://mamafatma.ma/Mama-fatma-logo.png",
+              sameAs: [
+                "https://t.snapchat.com/iBCMuuxx"
+              ],
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  telephone: "+212690764312",
+                  contactType: "customer service",
+                  areaServed: "MA",
+                  availableLanguage: ["ar", "fr"]
+                }
+              ]
+            })
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "Mamafatma",
+              alternateName: "ماما فاطمة",
+              url: "https://mamafatma.ma",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://mamafatma.ma/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              }
+            })
+          }}
+        />
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} ${cairo.variable} antialiased bg-white pt-44 md:pt-48`}>
         <PerformanceMonitor />
