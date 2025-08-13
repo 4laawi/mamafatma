@@ -127,6 +127,9 @@ export default function CategoriesPage() {
                       <img
                         src={category.image_url}
                         alt={lang === 'ar' ? category.name_ar : category.name_fr}
+                        width={64}
+                        height={64}
+                        loading="lazy"
                         className="w-16 h-16 object-cover rounded-lg"
                       />
                     </div>

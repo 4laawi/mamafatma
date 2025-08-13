@@ -321,6 +321,9 @@ export default function ProductForm({ product, onSave, onCancel }: ProductFormPr
                         <img
                           src={url}
                           alt={`Product ${index + 1}`}
+                          width={240}
+                          height={96}
+                          loading="lazy"
                           className="w-full h-24 object-cover rounded border"
                         />
                         <button

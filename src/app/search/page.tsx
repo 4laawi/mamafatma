@@ -198,6 +198,9 @@ function SearchPageContent() {
                   <img
                     src={product.image_urls?.[0] || "/vercel.svg"}
                     alt={lang === 'ar' ? product.name_ar : product.name_fr}
+                    width={800}
+                    height={800}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

@@ -144,6 +144,9 @@ export default function CategoryForm({ category, onSave, onCancel }: CategoryFor
                     <img
                       src={formData.image_url}
                       alt="Category"
+                      width={480}
+                      height={256}
+                      loading="lazy"
                       className="w-full h-32 object-cover rounded border"
                     />
                     <button

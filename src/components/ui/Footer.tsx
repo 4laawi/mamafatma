@@ -195,6 +195,19 @@ export default function Footer() {
                 <a href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">{t('terms')}</a>
               </div>
             </div>
+            <div className="mt-3 text-center">
+              <span className="text-gray-400 text-xs opacity-70">
+                {lang === 'ar' ? 'الموقع من إنجاز ' : 'Site web réalisé par '}
+                <a
+                  href="https://sitepro.ma"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline hover:text-green-400"
+                >
+                  SitePro.ma
+                </a>
+              </span>
+            </div>
           </div>
         </div>
       </footer>

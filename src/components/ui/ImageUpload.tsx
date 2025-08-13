@@ -135,6 +135,9 @@ export default function ImageUpload({ onUpload, onCancel, folder = "products" }:
                   <img
                     src={preview}
                     alt="Preview"
+                    width={640}
+                    height={384}
+                    loading="lazy"
                     className="w-full h-48 object-cover rounded"
                   />
                 </div>

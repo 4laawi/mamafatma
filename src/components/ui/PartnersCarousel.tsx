@@ -47,13 +47,15 @@ export default function PartnersCarousel() {
                 <img
                   src={logo}
                   alt="Partner logo"
+                  width={160}
+                  height={60}
+                  loading="lazy"
                   className="h-8 md:h-12 w-auto object-contain opacity-70 hover:opacity-100 transition-all duration-300 select-none pointer-events-none max-w-[120px] md:max-w-[160px]"
                   draggable={false}
                   style={{
                     filter: 'grayscale(100%)',
                   }}
                   onLoad={(e) => {
-                    // Remove grayscale on hover for better interaction
                     e.currentTarget.style.filter = 'grayscale(100%)';
                   }}
                 />
