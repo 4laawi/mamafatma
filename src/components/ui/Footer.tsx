@@ -199,7 +199,7 @@ export default function Footer() {
               <span className="text-gray-400 text-xs opacity-70">
                 {lang === 'ar' ? 'الموقع من إنجاز ' : 'Site web réalisé par '}
                 <a
-                  href="https://sitepro.ma"
+                  href="https://www.sitepro.ma"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline hover:text-green-400"
